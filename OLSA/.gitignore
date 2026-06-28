@@ -1,0 +1,9 @@
+/.ida-mcp
+/.vscode
+/OLSA.vcxproj
+/OLSA.vcxproj.filters
+/OLSA.vcxproj.user
+/x64/
+/OLSA/x64/
+/read_offset.log
+/testdat-latest-report.txt

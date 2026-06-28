@@ -1,0 +1,26 @@
+FTML::SmartPointer::extract key/value 对应关系（按 Archive::operator() 后紧跟 extract 的模式提取）
+
+提取规则
+- 匹配形态：FTML::Archive::operator()(X, "Key") 的返回值（Archive 子节点）被立即作为第三参数传给 FTML::SmartPointer::extract(..., Value, <that-archive>)
+- 仅输出能解析到静态字符串字面量的 Key（如 "Model"），不包含运行时拼接的 Key（如 Subsystem%02d）
+- Value 以 extract 的第二参数（uint32）为准，统一按 0x????????（HEX32）输出
+
+Key : Value
+AvgResultList : 0x017D5E61
+ColumnMeans : 0x001D402A
+ColumnMeansM : 0x001D402A
+Disp : 0xAC7EF8DF
+EigenVectors : 0x001D42D9
+EigenVectorsM : 0x001D42D9
+Interp : 0x40AD8043
+Models : 0x6AB96FD0
+OptCal : 0x4918C899
+ParVals : 0x001D402A
+Partition : 0x001D402A
+SamplesPerSubsystem : 0x001D4009
+SingularValues : 0x001D402A
+SingularValuesM : 0x001D402A
+Stack : 0x017E4E3C
+XYmodel : 0x01DD1131
+Zmodel : 0x01DD1131
+

@@ -1,0 +1,18 @@
+FTML::SmartPointer::extract 第二参数统计（部分结果）
+
+说明
+- 数据来源：对 __imp_?extract@SmartPointer@FTML@@... (0x1801BE020) 的 code xrefs
+- 当前已校验的调用点：13 / 217（仅覆盖少量 caller，用于验证流程与格式）
+- “名称”优先采用 caller 函数名；若窗口内可解析到字符串常量，则一并列出
+
+格式
+arg2(HEX32) | callsite_count | caller_names | nearby_strings
+
+0xAC7EF8DF | 1 | ?get@ABCCalModel@FTML@@UEAA_NAEBVArchive@2@@Z | Disp, Phi
+0x01DD1131 | 2 | ?get@ABCDisp@ABCCalModel@FTML@@UEAA_NAEBVArchive@3@@Z | XYmodel, Zmodel, C0, C1, m_C2, C3
+0x001D4E16 | 5 | ?readBlob@FTML@@YA?AV?$P@VCountable@FTML@@@1@AEAVDataRecord@1@@Z; ?readBlob@FTML@@YA?AV?$P@VCountable@FTML@@@1@PEBDI@Z | Blob
+0x001D402A | 2 | ?get@GridOptLine@FTML@@UEAA_NAEBVArchive@2@@Z; ?get@ParSet@FTML@@UEAA_NAEBVArchive@2@@Z | ParName, Partition, Seed, Range, Step, Clustering, Units, Index, Estimated, Cost, ParVals
+0x017E4E3C | 1 | ?get@MirrorInfo@MirrorOpticalCalModel@FTML@@UEAA_NAEBVArchive@3@@Z | Name, Roll, AOI, Stack
+0xAC7EF8AD | 1 | ?get@MirrorOpticalCalModel@FTML@@UEAA_NAEBVArchive@2@@Z | NumMirror, NumRays, RayNumber
+0x48254DFB | 1 | sub_1801035D0 | no data, System models and auto-results..., Add targets...
+
