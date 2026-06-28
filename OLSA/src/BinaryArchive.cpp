@@ -80,6 +80,11 @@ namespace {
     out_class_id = 0;
     out_object_id = 0;
 
+    // The nibble header encodes byte counts. Reject oversized values before
+    // reading into fixed-width ids to avoid overwriting the destination buffer.
+    if(class_len > sizeof(out_class_id) || module_len > sizeof(out_object_id)){
+        return false;
+    }
     if(class_len != 0 && !read_typed_block(state, &out_class_id, 1, class_len)){
         return false;
     }
@@ -112,6 +117,9 @@ namespace {
 
     std::uint32_t count = 0;
     if(count_size != 0){
+        if(count_size > sizeof(count)){
+            return false;
+        }
         if(state.input.offset + count_size > state.input.buffer.size()){
             return false;
         }
@@ -122,6 +130,9 @@ namespace {
 
     std::uint32_t packed_len = 0;
     if(packed_len_size != 0){
+        if(packed_len_size > sizeof(packed_len)){
+            return false;
+        }
         if(state.input.offset + packed_len_size > state.input.buffer.size()){
             return false;
         }

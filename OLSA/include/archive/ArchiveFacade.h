@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 
+#include "Countable.h"
 #include "ArchiveEngine.h"
 #include "ArchiveHook.h"
 
